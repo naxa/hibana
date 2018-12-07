@@ -1,0 +1,12 @@
+[package]
+name = "hibana"
+version = "0.1.0"
+authors = ["Kyushu Student Association"]
+license = "MIT"
+readme = "README.md"
+description = "Static site generator"
+repository = "https://github.com/student-kyushu/hibana"
+keywords = ["static", "site", "generator", "blog"]
+edition = "2018"
+
+[dependencies]
