@@ -11,3 +11,4 @@ edition = "2018"
 
 [dependencies]
 clap = "2.32"
+colored = "1.6"
