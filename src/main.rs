@@ -1,3 +1,5 @@
+use failure::Error;
+
 #[macro_use]
 extern crate clap;
 
@@ -10,9 +12,11 @@ fn main() {
     let matches = build_app().get_matches();
 
     match matches.subcommand() {
-        ("new", Some(matches)) => {
-            cmd_new(&matches).unwrap_or_else(|e| println!("{}", e.red().bold()))
-        }
+        ("new", Some(matches)) => cmd_new(&matches).unwrap_or_else(|e| print_error(e)),
         _ => build_app().print_help().expect("faild print help"),
     }
+}
+
+fn print_error(error: Error) {
+    println!("{}", error.to_string().red().bold())
 }
