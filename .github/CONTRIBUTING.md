@@ -28,7 +28,9 @@ We love PRs! Here's a quick guide:
 4. Commit your changes (Please use an appropriate commit prefix)
 5. Push to your fork and create a PR
 
-Please explain your changes! Reviewers don't have telepathy.😢
+Please explain your changes! Reviewers don't have telepathy.😢 
+
+Making smaller PRs is a good way to reduce review time. Please make PRs only one feature or change per PR.
 
 ## Commit Prefix
 
