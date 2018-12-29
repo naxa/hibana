@@ -1,7 +1,9 @@
+pub mod build;
 pub mod new;
 
 use clap::{App, AppSettings, Arg, SubCommand};
 
+pub use self::build::cmd_build;
 pub use self::new::cmd_new;
 
 pub fn build_app() -> App<'static, 'static> {
@@ -19,4 +21,5 @@ pub fn build_app() -> App<'static, 'static> {
                         .required(true),
                 ),
         )
+        .subcommand(SubCommand::with_name("build").about("build"))
 }
