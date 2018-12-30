@@ -109,13 +109,13 @@ fn pages_build(pages: &Pages) -> Result<(), Error> {
 fn setted_tera() -> Tera {
     let mut tera = Tera::default();
     tera.add_raw_template("base.html", include_str!("../templates/base.html"))
-        .expect("faild load template");
+        .expect("failed to load template");
 
     tera.add_raw_template("page.html", include_str!("../templates/page.html"))
-        .expect("faild load template");
+        .expect("failed to load template");
 
     tera.add_raw_template("index.html", include_str!("../templates/index.html"))
-        .expect("faild load template");
+        .expect("failed to load template");
 
     tera.autoescape_on(vec![]);
     tera
