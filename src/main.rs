@@ -13,7 +13,7 @@ fn main() {
     match matches.subcommand() {
         ("new", Some(matches)) => cmd_new(&matches).unwrap_or_else(|e| print_error(e)),
         ("build", Some(_)) => cmd_build().unwrap_or_else(|e| print_error(e)),
-        _ => build_app().print_help().expect("faild print help"),
+        _ => build_app().print_help().expect("failed to print help"),
     }
 }
 
