@@ -1,10 +1,12 @@
 pub mod build;
 pub mod new;
+pub mod serve;
 
 use clap::{App, AppSettings, Arg, SubCommand};
 
 pub use self::build::cmd_build;
 pub use self::new::cmd_new;
+pub use self::serve::cmd_serve;
 
 pub fn build_app() -> App<'static, 'static> {
     App::new(crate_name!())
@@ -22,4 +24,6 @@ pub fn build_app() -> App<'static, 'static> {
                 ),
         )
         .subcommand(SubCommand::with_name("build").about("build"))
+        .subcommand(SubCommand::with_name("serve")
+            .about("serve local server"))
 }
