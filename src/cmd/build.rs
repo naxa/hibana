@@ -4,7 +4,7 @@ use serde_derive::Serialize;
 use std::fs::{create_dir_all, File};
 use std::io::prelude::*;
 use tera::{Context, Tera};
-use walkdir::WalkDir;
+use walkdir::{DirEntry, WalkDir};
 
 const OUTPUT_DIR: &str = "public";
 const CONTENTS_DIR: &str = "contents";
@@ -29,8 +29,13 @@ type Pages = Vec<Page>;
 
 fn build_pages(dir: &str) -> Result<Pages, Error> {
     let mut pages = Vec::new();
+    let entrys: Vec<DirEntry> = WalkDir::new(dir)
+        .into_iter()
+        .filter_map(|e| e.ok())
+        .collect();
 
-    for entry in WalkDir::new(dir).into_iter().filter_map(|e| e.ok()) {
+
+    for entry in entrys {
         if !entry.metadata()?.is_file() {
             continue;
         };
