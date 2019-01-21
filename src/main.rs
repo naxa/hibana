@@ -10,11 +10,18 @@ use failure::Error;
 fn main() {
     let matches = build_app().get_matches();
 
-    match matches.subcommand() {
-        ("new", Some(matches)) => cmd_new(&matches).unwrap_or_else(|e| print_error(e)),
-        ("build", Some(_)) => cmd_build().unwrap_or_else(|e| print_error(e)),
-        ("serve", Some(_)) => cmd_serve().unwrap_or_else(|e| print_error(e)),
-        _ => build_app().print_help().expect("failed to print help"),
+    let result = match matches.subcommand() {
+        ("new", Some(matches)) => cmd_new(&matches),
+        ("build", Some(_)) => cmd_build(),
+        ("serve", Some(_)) => cmd_serve(),
+        _ => {
+            build_app().print_help().expect("failed to print help");
+            return ();
+        }
+    };
+
+    if let Err(e) = result {
+        print_error(e);
     }
 }
 
