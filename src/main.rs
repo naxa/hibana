@@ -26,5 +26,5 @@ fn main() {
 }
 
 fn print_error(error: Error) {
-    println!("{}", error.to_string().red().bold())
+    println!("{}: {}", "error".red().bold(), error)
 }
