@@ -35,7 +35,7 @@ fn build_pages(dir: &str) -> Result<Pages, Error> {
         .collect();
 
     if entrys.is_empty() {
-        failure::bail!("error: contents directory not found");
+        failure::bail!("error: contents directory or file not found");
     }
 
     for entry in entrys {
