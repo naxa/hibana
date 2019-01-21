@@ -13,6 +13,7 @@ fn main() {
     let result = match matches.subcommand() {
         ("new", Some(matches)) => cmd_new(&matches),
         ("build", Some(_)) => cmd_build(),
+        ("serve", Some(_)) => cmd_serve(),
         _ => {
             build_app().print_help().expect("failed to print help");
             return ();
