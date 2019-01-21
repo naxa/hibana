@@ -3,6 +3,7 @@ use pulldown_cmark::{html, Parser};
 use serde_derive::Serialize;
 use std::fs::{create_dir_all, File};
 use std::io::prelude::*;
+use std::path::Path;
 use tera::{Context, Tera};
 use walkdir::{DirEntry, WalkDir};
 
@@ -29,6 +30,9 @@ type Pages = Vec<Page>;
 
 fn build_pages(dir: &str) -> Result<Pages, Error> {
     let mut pages = Vec::new();
+
+    check_contents(dir)?;
+
     let entrys: Vec<DirEntry> = WalkDir::new(dir)
         .into_iter()
         .filter_map(|e| e.ok())
@@ -109,6 +113,19 @@ fn pages_build(pages: &Pages) -> Result<(), Error> {
 
         let mut write_buf = File::create(&page.url)?;
         write_buf.write(rendered_html.as_bytes())?;
+    }
+
+    Ok(())
+}
+
+fn check_contents(dir: &str) -> Result<(), Error> {
+    let path = Path::new(dir);
+
+    if !path.exists() {
+        failure::bail!(
+            r#"contents dir is not found.
+hint: execute 'hibana new project_name'"#
+        )
     }
 
     Ok(())
