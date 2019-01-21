@@ -34,6 +34,9 @@ fn build_pages(dir: &str) -> Result<Pages, Error> {
         .filter_map(|e| e.ok())
         .collect();
 
+    if entrys.is_empty() {
+        failure::bail!("error: contents directory not found");
+    }
 
     for entry in entrys {
         if !entry.metadata()?.is_file() {
