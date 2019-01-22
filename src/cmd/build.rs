@@ -38,7 +38,7 @@ fn build_pages(dir: &str) -> Result<Pages, Error> {
         .filter_map(|e| e.ok())
         .collect();
 
-    // Len becomes 1 even if there is nothing in the directory
+    // entrys.len() returns 1 if there is nothing in the directory
     if entrys.len() <= 1 {
         failure::bail!("contents file not found");
     }
