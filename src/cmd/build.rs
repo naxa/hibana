@@ -122,7 +122,7 @@ fn pages_build(pages: &Pages) -> Result<(), Error> {
 fn check_contents(dir: &str) -> Result<(), Error> {
     let path = Path::new(dir);
 
-    if !path.exists() {
+    if !path.is_dir() {
         failure::bail!(r#"contents dir is not found. hint: execute 'hibana new project_name'"#)
     }
 
