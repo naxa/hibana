@@ -123,10 +123,7 @@ fn check_contents(dir: &str) -> Result<(), Error> {
     let path = Path::new(dir);
 
     if !path.exists() {
-        failure::bail!(
-            r#"contents dir is not found.
-hint: execute 'hibana new project_name'"#
-        )
+        failure::bail!(r#"contents dir is not found. hint: execute 'hibana new project_name'"#)
     }
 
     Ok(())
