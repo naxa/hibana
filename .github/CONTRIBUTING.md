@@ -10,7 +10,7 @@ Again, development with common guidelines means less work for you. For instance,
 
 Please also read this [CODE OF CONDUCT](https://github.com/student-kyushu/hibana/blob/master/.github/CODE_OF_CONDUCT.md).
 
-# Your First Contribution
+## Your First Contribution
 
 Unsure where to begin contributing to Hibana? You can start by looking for help-wanted issues. (If you're a member of KSA and want to develop with us, please tell the managers that on Discord.)
 
@@ -18,7 +18,7 @@ Working on your first Pull Request? You can learn how from this *free* series [H
 
 Don't hesitate to contribute and ask for help; everyone is a beginner at first.🐣
 
-# Pull Requests
+## Pull Requests
 
 We love PRs! Here's a quick guide:
 
@@ -32,7 +32,7 @@ Please explain your changes! Reviewers don't have telepathy.😢
 
 Making smaller PRs is a good way to reduce review time. Please make PRs only one feature or change per PR.
 
-## Commit Prefix
+### Commit Prefix
 
 Recommend to use these:
 
@@ -44,12 +44,12 @@ Recommend to use these:
 * test: Changes test/* files
 * minor: Minor changes(e.g. fixes typo)
 
-# Issues
+## Issues
 
 If you find a security vulnerability, do **NOT** open an issue. Email contact@student-kyushu.org instead.
 
 Feature requests and bug reports are filed in https://github.com/student-kyushu/hibana/issues. Before submitting a new issue, please search for similar issues. If somebody has encountered similar bug or wanted similar feature, please add your reaction or comment to the issues.💓
 
-# Community
+## Community
 
 Hibana is developed with the support and involvement of KSA. If you're interested in us, please visit https://student-kyushu.org.

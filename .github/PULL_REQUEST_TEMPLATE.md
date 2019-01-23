@@ -1,5 +1,7 @@
 ### Types of this PR
+
 <!-- Check one of the following -->
+
 - [ ] Bug fix
 - [ ] New feature
 - [ ] Documentation
