@@ -6,6 +6,11 @@ rust:
 cache: cargo
 services: docker
 sudo: required
+branches:
+  only:
+    - staging
+    - trying
+    - master
 
 # environment
 matrix:
