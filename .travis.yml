@@ -8,8 +8,7 @@ services: docker
 sudo: required
 branches:
   only:
-    - staging
-    - trying
+    - auto
     - master
 
 # environment
