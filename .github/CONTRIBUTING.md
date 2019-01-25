@@ -24,7 +24,7 @@ We love PRs! Here's a quick guide:
 
 1. Fork this repository
 2. Happy coding
-3. Make all the tests pass
+3. Make all the tests pass (Run `cargo test`)
 4. Commit your changes (Please use an appropriate commit prefix)
 5. Push to your fork and create a PR
 6. Ask someone to review
