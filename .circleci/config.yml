@@ -11,7 +11,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: cache
+          key: cargo-{{ checksum "Cargo.lock" }}/1
       - run:
           name: Check code format
           command: |
@@ -28,7 +28,7 @@ jobs:
           name: Run Test
           command: cargo test
       - save_cache:
-          key: cache
+          key: cargo-{{ checksum "Cargo.lock" }}/1
           paths:
             - "~/.cargo"
             - "./target"
