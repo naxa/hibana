@@ -131,13 +131,13 @@ fn check_contents(dir: &str) -> Result<(), Error> {
 
 fn setted_tera() -> Tera {
     let mut tera = Tera::default();
-    tera.add_raw_template("base.html", include_str!("../templates/base.html"))
+    tera.add_raw_template("base.html", include_str!("../../templates/base.html"))
         .expect("failed to load template");
 
-    tera.add_raw_template("page.html", include_str!("../templates/page.html"))
+    tera.add_raw_template("page.html", include_str!("../../templates/page.html"))
         .expect("failed to load template");
 
-    tera.add_raw_template("index.html", include_str!("../templates/index.html"))
+    tera.add_raw_template("index.html", include_str!("../../templates/index.html"))
         .expect("failed to load template");
 
     tera.autoescape_on(vec![]);
