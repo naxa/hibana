@@ -59,7 +59,7 @@ Recommend to use these:
 * docs: Changes documentation
 * refactor: Changes that neither fixes a bug nor adds a new feature
 * perf: Improves performance
-* test: Changes test/* files
+* test: Changes test/* files or CI files
 * minor: Minor changes(e.g. fixes typo)
 
 ## Issues
