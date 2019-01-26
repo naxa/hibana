@@ -24,11 +24,29 @@ We love PRs! Here's a quick guide:
 
 1. Fork this repository
 2. Happy coding
-3. Make all the tests pass
+3. Make all the tests pass (Run `cargo test`)
 4. Commit your changes (Please use an appropriate commit prefix)
 5. Push to your fork and create a PR
+6. Ask someone to review
+7. If reviewer approves your PR, it will be tried to merge
+8. When there is no problem, your code will be merged right away
+9. Great! Thanks for contributing!
 
-Please explain your changes! Reviewers don't have telepathy.😢 
+Except for minor or urgent changes, PRs are reviewed by another person. To ask someone to review, you can add an `r?` to the message. We have a smart and cute bot, @KoujiroFrau, that will automatically assign a reviewer. For example, you can ask Huyuumi, core developer, to review as follow:
+
+```Markdown
+r? @JohnTitor
+```
+
+After someone has reviewed and approved your PR, they will leave a comment like this:
+
+```Markdown
+@KoujiroFrau r+
+```
+
+This tells @KoujiroFrau that your PR has been approved, she queues the PR into the approved queue. If there is no active item, she tries to merge the PR into the latest upstream and run CI on the special branch used for auto testing. When the CI statuses are all green, she will merge your code into `master` and close the PR.
+
+Please explain your changes! Reviewers don't have telepathy.😢
 
 Making smaller PRs is a good way to reduce review time. Please make PRs only one feature or change per PR.
 
@@ -41,7 +59,7 @@ Recommend to use these:
 * docs: Changes documentation
 * refactor: Changes that neither fixes a bug nor adds a new feature
 * perf: Improves performance
-* test: Changes test/* files
+* test: Changes test/* files or CI files
 * minor: Minor changes(e.g. fixes typo)
 
 ## Issues
