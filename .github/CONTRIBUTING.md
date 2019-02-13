@@ -64,10 +64,10 @@ Recommend to use these:
 
 ## Issues
 
-If you find a security vulnerability, do **NOT** open an issue. Email contact@student-kyushu.org instead.
+If you find a security vulnerability, do **NOT** open an issue. Email contact@kyushu.gr.jp instead.
 
 Feature requests and bug reports are filed in https://github.com/student-kyushu/hibana/issues. Before submitting a new issue, please search for similar issues. If somebody has encountered similar bug or wanted similar feature, please add your reaction or comment to the issues.💓
 
 ## Community
 
-Hibana is developed with the support and involvement of KSA. If you're interested in us, please visit https://student-kyushu.org.
+Hibana is developed with the support and involvement of KSA. If you're interested in us, please visit https://kyushu.gr.jp.
