@@ -33,7 +33,7 @@ matrix:
 before_install:
   - set -e
   - rustup self update
-  - rustup component add rustfmt-preview
+  - cargo install rustfmt-nightly --force
 script:
   - cargo fmt
   - cargo build --verbose --all

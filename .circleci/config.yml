@@ -15,7 +15,7 @@ jobs:
       - run:
           name: Check code format
           command: |
-            rustup component add rustfmt-preview
+            cargo install rustfmt-nightly --force
             rustfmt --version
             cargo fmt
       - run:
