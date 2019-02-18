@@ -70,4 +70,4 @@ Feature requests and bug reports are filed in https://github.com/student-kyushu/
 
 ## Community
 
-Hibana is developed with the support and involvement of KSA. If you're interested in us, please visit https://kyushu.gr.jp.
+Hibana is developed with the support and involvement of KSA. If you're interested in us, please visit https://www.kyushu.gr.jp.
