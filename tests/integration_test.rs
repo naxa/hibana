@@ -1,13 +1,12 @@
 use std::process::Command;
 use std::path::Path;
-use std::fs::{create_dir, File, remove_dir_all};
+use std::fs::remove_dir_all;
 
 struct Cleanup;
 
 impl Drop for Cleanup {
     fn drop(&mut self) {
         remove_dir_all(Path::new(NATORI)).unwrap();
-        println!("hoge");
     }
 }
 
