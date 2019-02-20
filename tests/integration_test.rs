@@ -6,12 +6,12 @@ struct Cleanup;
 
 impl Drop for Cleanup {
     fn drop(&mut self) {
-        remove_dir_all(Path::new("natori")).unwrap();
+        remove_dir_all(Path::new(NATORI)).unwrap();
         println!("hoge");
     }
 }
 
-static NEW_WITHOUT_NAME: &'static str = "error: The following required arguments were not provided:
+const NEW_WITHOUT_NAME: &str = "error: The following required arguments were not provided:
     <name>
 
 USAGE:
@@ -20,9 +20,11 @@ USAGE:
 For more information try --help
 ";
 
-static BUILD_WITHOUT_PROJECT: &'static str = "\u{1b}[1;31merror\u{1b}[0m: \
+const BUILD_WITHOUT_PROJECT: &str = "\u{1b}[1;31merror\u{1b}[0m: \
 contents dir is not found. hint: execute \'hibana new project_name\'
 ";
+
+const NATORI: &str = "natori";
 
 #[test]
 fn test_new_without_name() {
@@ -39,11 +41,11 @@ fn test_cmd_new() {
     let _cleanup = Cleanup;
     Command::new("target/debug/hibana")
         .arg("new")
-        .arg("natori")
+        .arg(NATORI)
         .output()
         .expect("failed to run new command");
 
-    let path = Path::new("natori");
+    let path = Path::new(NATORI);
     assert_eq!(path.exists(), true);
     assert_eq!(path.join("contents").exists(), true);
     assert_eq!(path.join("layouts").exists(), true);
