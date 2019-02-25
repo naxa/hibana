@@ -45,13 +45,13 @@ fn test_cmd_new() {
         .expect("failed to run new command");
 
     let path = Path::new(NATORI);
-    assert_eq!(path.exists(), true);
-    assert_eq!(path.join("contents").exists(), true);
-    assert_eq!(path.join("layouts").exists(), true);
-    assert_eq!(path.join("public").exists(), true);
-    assert_eq!(path.join("assets").exists(), true);
-    assert_eq!(path.join("config.toml").exists(), true);
-    assert_eq!(path.join("contents").join("index.md").exists(), true);
+    assert!(path.exists());
+    assert!(path.join("contents").exists());
+    assert!(path.join("layouts").exists());
+    assert!(path.join("public").exists());
+    assert!(path.join("assets").exists());
+    assert!(path.join("config.toml").exists());
+    assert!(path.join("contents").join("index.md").exists());
 }
 
 #[test]
