@@ -5,7 +5,7 @@ use std::io::{Write};
 use std::path::Path;
 
 #[derive(Debug, Fail)]
-#[fail(display = "Project exists!")]
+#[fail(display = "Project directory already exists!")]
 struct ProjectExists;
 
 const INDEX_SAMPLE: &str = "---
@@ -36,7 +36,7 @@ fn create_project_dir(path: &Path) -> Result<(), Error> {
     create_dir(path.join("assets"))?;
 
     File::create(path.join("config.toml"))?;
-    let mut index = File::create(path.join("contents/index.md"))?;
+    let mut index = File::create(path.join("contents").join("index.md"))?;
     write!(index, "{}", INDEX_SAMPLE)?;
     index.flush()?;
 
