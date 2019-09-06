@@ -1,6 +1,6 @@
 [package]
 name = "hibana"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Kyushu Student Association"]
 license = "MIT"
 readme = "README.md"
